@@ -41,11 +41,10 @@ export function reset() {
 }
 
 function reducer(state = initialState, action) {
-    state = Object.assign(state, {lastAction: action});
-    var pv = state.pastValues.slice();
-    var fv = state.futureValues.slice();
-    var temp;
-
+    let state = Object.assign(state, {lastAction: action});
+    let pv = state.pastValues.slice();
+    let fv = state.futureValues.slice();
+    let temp;
     switch (action.type){
         case INCREMENT:
             pv.push(state.currentValue);
